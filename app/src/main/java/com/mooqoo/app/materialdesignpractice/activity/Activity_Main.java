@@ -44,7 +44,7 @@ public class Activity_Main extends ActionBarActivity implements FragmentDrawer.F
     //when the drawer item is clicked
     @Override
     public void onDrawerItemSelected(View view, int position) {
-        Log.e(TAG,"position=" + position + "View.getId()="+view.getId());
+        Log.i(TAG,"position=" + position + "View.getId()="+view.getId());
         displayView(position);
     }
 
