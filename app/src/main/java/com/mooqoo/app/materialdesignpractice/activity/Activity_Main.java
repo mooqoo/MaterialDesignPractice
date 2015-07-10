@@ -7,10 +7,15 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
+import android.transition.Explode;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.util.Log;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.Toast;
 
 import com.mooqoo.app.materialdesignpractice.R;
@@ -24,7 +29,11 @@ public class Activity_Main extends ActionBarActivity implements FragmentDrawer.F
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        // enable transitions, it must be called before adding content
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
+        getWindow().setEnterTransition(new Explode());
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
 
         // Set a toolbar to replace the action bar.
@@ -39,6 +48,8 @@ public class Activity_Main extends ActionBarActivity implements FragmentDrawer.F
 
         //init fragment
         displayView(0);
+
+
     }
 
     //when the drawer item is clicked
@@ -96,6 +107,8 @@ public class Activity_Main extends ActionBarActivity implements FragmentDrawer.F
         }
 
         if (fragment != null) {
+            fragment.setEnterTransition(new Slide(Gravity.BOTTOM));
+            fragment.setExitTransition(new Fade(Fade.MODE_OUT));
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);

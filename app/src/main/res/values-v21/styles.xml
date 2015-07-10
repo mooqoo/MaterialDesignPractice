@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppTheme" parent="AppTheme.Base">
+        <!-- what does this do> -->
+        <item name="android:windowContentTransitions">true</item>
+        <!-- what does this do> -->
+        <item name="android:windowAllowEnterTransitionOverlap">true</item>
+        <!-- what does this do> -->
+        <item name="android:windowAllowReturnTransitionOverlap">true</item>
+        <!-- what does this do> -->
+        <item name="android:windowSharedElementEnterTransition">@android:transition/move</item>
+        <!-- what does this do> -->
+        <item name="android:windowSharedElementExitTransition">@android:transition/move</item>
+    </style>
+</resources>

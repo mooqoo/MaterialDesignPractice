@@ -6,10 +6,10 @@ android {
 
     defaultConfig {
         applicationId "com.mooqoo.app.materialdesignpractice"
-        minSdkVersion 14
+        minSdkVersion 21
         targetSdkVersion 22
         versionCode 1
-        versionName "1.0.3"
+        versionName "1.0.3.1"
     }
     buildTypes {
         release {
