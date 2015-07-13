@@ -12,12 +12,16 @@
     <string name="nav_item_home">Home</string>
     <string name="nav_item_friends">Friends</string>
     <string name="nav_item_notifications">Messages</string>
+    <string name="nav_item_horizontalscroll">Horizontal Scroll</string>
+    <string name="nav_item_viewpager">View Pager</string>
 
     <!-- navigation drawer item labels  -->
     <string-array name="nav_drawer_labels">
         <item>@string/nav_item_home</item>
         <item>@string/nav_item_friends</item>
         <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_horizontalscroll</item>
+        <item>@string/nav_item_viewpager</item>
     </string-array>
 
     <string name="title_messages">Messages</string>

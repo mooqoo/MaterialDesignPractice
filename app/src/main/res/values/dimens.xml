@@ -4,4 +4,5 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="nav_drawer_width">260dp</dimen>
     <dimen name="row_cardview_height">80dp</dimen>
+    <dimen name="item_photoinfo_width">110dp</dimen>
 </resources>

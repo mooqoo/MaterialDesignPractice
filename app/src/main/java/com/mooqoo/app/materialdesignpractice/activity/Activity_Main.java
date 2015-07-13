@@ -102,6 +102,14 @@ public class Activity_Main extends ActionBarActivity implements FragmentDrawer.F
                 fragment = new FragmentMessages();
                 title = getString(R.string.title_messages);
                 break;
+            case 3:
+                fragment = new FragmentHorizontalScroll();
+                title = getString(R.string.nav_item_horizontalscroll);
+                break;
+            case 4:
+                fragment = new FragmentViewPager();
+                title = getString(R.string.nav_item_viewpager);
+                break;
             default:
                 break;
         }

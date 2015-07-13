@@ -2,18 +2,19 @@ package com.mooqoo.app.materialdesignpractice.activity;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v4.app.Fragment;
-import android.support.v7.widget.Toolbar;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.mooqoo.app.materialdesignpractice.Interface.ClickListener;
 import com.mooqoo.app.materialdesignpractice.R;
 import com.mooqoo.app.materialdesignpractice.adapter.NavigationDrawerAdapter;
 import com.mooqoo.app.materialdesignpractice.model.NavDrawerItem;
@@ -126,12 +127,6 @@ public class FragmentDrawer extends Fragment {
             }
         });
 
-    }
-
-    public static interface ClickListener {
-        public void onClick(View view, int position);
-
-        public void onLongClick(View view, int position);
     }
 
     static class RecyclerTouchListener implements RecyclerView.OnItemTouchListener {
